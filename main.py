@@ -22,7 +22,6 @@ text = d["clean_text"]
 # determine stopwords
 stop_words = set(stopwords.words('english'))
 
-
 # define function to remove stopwords
 def remove_stopwords(text):
     tokens = nltk.word_tokenize(text)
@@ -52,4 +51,5 @@ def stem_text(text):
 
 text = text.apply(stem_text)
 
+# np.savetxt("clean-dataset.csv", pd.Series.tolist(text))
 print(text)
